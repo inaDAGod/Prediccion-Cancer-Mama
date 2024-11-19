@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from model_j48 import train_and_predict  # Importar lógica del modelo J48
 from model_cluster import process_clusters  # Importar lógica del Clustering
+from model_neural import process_neural  # Importar lógica de la Red Neuronal
 import os
 
 app = Flask(__name__)
@@ -71,7 +72,8 @@ def run_model_j48(file_path):
         return render_template(
             'result.html',
             result=interpretation,
-            graph_path='uploads/tree.png'
+            graph_path='uploads/tree.png',
+            file_path=os.path.basename(file_path)
         )
     except Exception as e:
         flash(f"Error al procesar el modelo J48: {str(e)}", 'danger')
@@ -91,11 +93,36 @@ def run_model_cluster(file_path):
         return render_template(
             'result_cluster.html',
             result=result,
-            graph_path='uploads/clusters.png'
+            graph_path='uploads/clusters.png',
+            file_path=os.path.basename(file_path)
         )
     except Exception as e:
         flash(f"Error al procesar el modelo de Clustering: {str(e)}", 'danger')
         return redirect(url_for('index'))
+
+# Ruta para ejecutar Red Neuronal
+@app.route('/run-model/neural/<file_path>', methods=['GET'])
+def run_model_neural(file_path):
+    try:
+        # Ruta del archivo subido
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file_path)
+
+        # Procesar el archivo con Red Neuronal
+        result = process_neural(file_path)
+
+        # Mostrar resultado y gráficos
+        return render_template(
+            'result_neural.html',
+            result=result,
+            graph_path='uploads/neural_training.png',
+            layers_graph_path='uploads/neural_layers.png',
+            file_path=os.path.basename(file_path)
+        )
+    except Exception as e:
+        # Extraer solo el nombre del archivo para redirigir
+        file_name = os.path.basename(file_path)
+        flash(f"Error al procesar el modelo de Red Neuronal: {str(e)}", 'danger')
+        return redirect(url_for('model_options', file_path=file_name))
 
 if __name__ == "__main__":
     app.run(debug=True)

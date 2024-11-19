@@ -48,7 +48,9 @@
             </a>
         </div>
 
-        <a href="/" class="btn btn-primary mt-3">Volver al Inicio</a>
+        <a href="{{ url_for('model_options', file_path=file_path) }}" class="btn btn-primary mt-3">
+          Volver a Opciones del Modelo
+      </a>>
     </div>
 </body>
 </html>
