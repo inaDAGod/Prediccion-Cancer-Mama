@@ -1,15 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Página Principal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Cáncer de Mama</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
-<body class="bg-light text-center">
-    <div class="container py-5">
-        <h1 class="display-4 text-primary">Bienvenido a Predicción de Cáncer de Mama</h1>
-        <p class="lead">Utiliza nuestro sistema para analizar datos y obtener predicciones basadas en modelos avanzados de IA.</p>
-        <a href="/login" class="btn btn-primary btn-lg mt-3">Iniciar Sesión</a>
+<body class="bg-light">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Cáncer de Mama</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección Hero con título principal y llamada a acción -->
+    <section class="hero bg-pink text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Bienvenido a la Plataforma de Predicción de Cáncer de Mama</h1>
+            <p class="lead">Usa nuestra herramienta avanzada para ayudar a detectar posibles riesgos de cáncer de mama.</p>
+            <a href="login.html" class="btn btn-light btn-lg">Iniciar Sesión</a>
+        </div>
+    </section>
+
+    <!-- Sección sobre el cáncer de mama -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">¿Qué es el Cáncer de Mama?</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>El cáncer de mama es el tipo de cáncer más común en mujeres, aunque también puede afectar a hombres. Se origina en las células de la mama y puede diseminarse a otras partes del cuerpo si no se detecta a tiempo.</p>
+                <p>Es fundamental realizarse chequeos regulares y estar al tanto de los síntomas para una detección temprana.</p>
+                <p>Entre los síntomas más comunes se encuentran cambios en la piel de la mama, bultos o cambios en la forma del seno, y secreción anormal del pezón.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://media.ambito.com/p/9569d97c363f9a6ad6782f2150932872/adjuntos/239/imagenes/041/896/0041896004/1200x675/smart/cancer-mama.png" alt="Cáncer de mama" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas sobre el cáncer de mama -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">Estadísticas sobre el Cáncer de Mama</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="text-center">En Bolivia</h4>
+                <p>En Bolivia, el cáncer de mama representa una de las principales causas de muerte entre las mujeres. Según el Ministerio de Salud de Bolivia, aproximadamente 5,000 mujeres son diagnosticadas con cáncer de mama cada año, y más del 60% de ellas lo hacen en etapas avanzadas. Esto resalta la importancia de la detección temprana.</p>
+                <ul>
+                    <li>Incidencia en mujeres adultas: 25 por cada 100,000 mujeres.</li>
+                    <li>Tasa de mortalidad: 10 muertes por cada 100,000 mujeres.</li>
+                    <li>50% de los casos se diagnostican a partir de los 50 años.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center">A Nivel Mundial</h4>
+                <p>A nivel mundial, el cáncer de mama es la forma de cáncer más frecuente entre mujeres. Según la Organización Mundial de la Salud (OMS), cada año se registran más de 2 millones de nuevos casos de cáncer de mama, y más de 600,000 muertes anuales debido a este cáncer.</p>
+                <ul>
+                    <li>1 de cada 8 mujeres en el mundo desarrollará cáncer de mama a lo largo de su vida.</li>
+                    <li>La tasa de supervivencia global a 5 años es del 80%, dependiendo de la etapa del diagnóstico.</li>
+                    <li>Se estima que el cáncer de mama representa el 25% de todos los cánceres diagnosticados en mujeres.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cáncer de Mama en Hombres -->
+    <section class="container py-5">
+        <h2 class="text-center mb-4">El Cáncer de Mama también afecta a los hombres</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>El cáncer de mama no es exclusivo de las mujeres. Aunque es mucho menos común, los hombres también pueden desarrollar cáncer de mama. Se estima que aproximadamente el 1% de todos los casos de cáncer de mama ocurren en hombres.</p>
+                <p>Los síntomas en los hombres son similares a los de las mujeres, e incluyen bultos en el pecho, cambios en la piel del área mamaria, o secreción del pezón. El diagnóstico temprano es fundamental para un tratamiento exitoso.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://img.freepik.com/vector-premium/cartel-concientizacion-sobre-cancer-mama-cuerpo-hombre-que-cubre-pecho-vector_112018-979.jpg" alt="Cáncer de mama en hombres" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección sobre los Síntomas del Cáncer de Mama -->
+<section class="container py-5" id="sintomas">
+    <h2 class="text-center mb-4">Síntomas Comunes del Cáncer de Mama</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p>El cáncer de mama en sus etapas iniciales puede no presentar síntomas evidentes, pero con el tiempo, los siguientes síntomas pueden aparecer:</p>
+            <ul>
+                <li><strong>Bultos en el seno</strong>: El síntoma más común. Los bultos pueden sentirse como una masa dura, aunque no todos los bultos son cancerosos.</li>
+                <li><strong>Cambios en la piel del seno</strong>: Pueden aparecer hoyuelos, arrugas o la piel del seno puede tomar un aspecto de "piel de naranja".</li>
+                <li><strong>Cambios en el pezón</strong>: Si el pezón se retrae (se hunde hacia adentro), se enrojese o presenta secreción anormal, puede ser una señal de alerta.</li>
+                <li><strong>Dolor en el seno o el pezón</strong>: Aunque el dolor no es común en las etapas tempranas, algunos casos pueden presentar molestias o dolor localizado.</li>
+                <li><strong>Secreción del pezón</strong>: Cualquier tipo de secreción anormal, especialmente si es sanguinolenta o transparente, debe ser evaluada por un médico.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="https://www.clinicalourdesmartin.com/images/easyblog_articles/131/b2ap3_large_sintomas-cancer-mama-micropigmentacion-areola-sevilla.png" alt="Síntomas del Cáncer de Mama" class="img-fluid rounded">
+        </div>
     </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <p><strong>Importante:</strong> No todos los bultos o cambios en el seno son cáncer. Sin embargo, si experimentas alguno de estos síntomas, es fundamental consultar a un médico para un diagnóstico adecuado. La detección temprana puede mejorar significativamente las posibilidades de un tratamiento exitoso.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Video informativo -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Conoce más sobre el Cáncer de Mama</h2>
+            <iframe width="80%" height="400" src="https://www.youtube.com/embed/iupY8RKSqLQ?si=HVSE8chB-63wURp6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Llamada a la acción para la predicción -->
+    <section class="bg-pink text-white text-center py-5">
+        <div class="container">
+            <h2 class="display-4">¿Te gustaría predecir tu riesgo de cáncer de mama?</h2>
+            <p>Usa nuestra herramienta para analizar tu información y obtener una predicción basada en inteligencia artificial.</p>
+            <a href="login.html" class="btn btn-light btn-lg">Iniciar Sesión</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Predicción de Cáncer de Mama. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
