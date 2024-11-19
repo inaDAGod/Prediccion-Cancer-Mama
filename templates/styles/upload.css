@@ -1,0 +1,66 @@
+/* Estilo general para el body */
+body {
+    background-color: #f9f9f9; /* Fondo claro para un aspecto limpio */
+    font-family: 'Arial', sans-serif; /* Fuente clara y moderna */
+}
+
+/* Estilo para el título principal */
+h2.text-pink {
+    color: #e91e63; /* Rosa vibrante para el título */
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Estilo para el texto de descripción */
+p.lead {
+    color: #666; /* Gris suave para el texto */
+    font-size: 1.1rem;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+/* Estilo para el campo de input del archivo */
+input[type="file"] {
+    background-color: #f8f9fa; /* Fondo ligeramente gris para el campo de archivo */
+    border: 2px solid #e91e63; /* Bordes rosa para hacer contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    width: 100%; /* Hacer que ocupe el 100% del contenedor */
+    transition: border-color 0.3s ease; /* Transición suave cuando el campo de archivo es enfocado */
+}
+
+input[type="file"]:focus {
+    border-color: #d81b60; /* Cambio de color en el borde cuando el input está enfocado */
+}
+
+/* Estilo del botón */
+.buplo {
+    background-color: #e91e63; /* Verde para el botón de subir */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados para el botón */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    width: 100%; /* El botón ocupará todo el ancho */
+}
+
+.buplo:hover {
+    background-color: #f56b99; 
+}
+
+/* Estilo adicional para los márgenes */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Espaciado del formulario */
+form {
+    margin-top: 2rem;
+}

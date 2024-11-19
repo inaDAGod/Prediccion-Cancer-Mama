@@ -1,0 +1,154 @@
+/* Estilo general para el body */
+body {
+    background-color: #f7f7f7; /* Fondo claro para un aspecto limpio */
+    font-family: 'Arial', sans-serif; /* Fuente clara y moderna */
+    color: #333; /* Color de texto general */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título principal */
+h2.text-primary {
+    color: #e91e63; /* Rosa vibrante para el título */
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.mt-4 {
+    color: #e91e63; 
+}
+.titulo{
+    color: #e91e63; /* Rosa vibrante para el título */
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Descripción debajo del título */
+p.lead {
+    font-size: 1.1rem;
+    color: #666; /* Gris suave para el texto de descripción */
+    margin-bottom: 30px;
+}
+
+/* Estilo para las tarjetas */
+.card {
+    border: none;
+    background-color: #fce4ec; /* Rosa suave para las tarjetas */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #e91e63; /* Rosa fuerte para los títulos de las tarjetas */
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555; /* Gris oscuro para el texto dentro de las tarjetas */
+}
+
+.card-text strong {
+    color: #9c27b0; /* Rosa morado para los elementos clave */
+}
+
+/* Estilo para las listas dentro de la tarjeta */
+ul.text-start {
+    font-size: 1rem;
+    margin-left: 20px;
+    color: #555; /* Gris oscuro para las listas */
+}
+
+ul.text-start li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para las imágenes */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-top: 20px;
+}
+
+/* Estilo para los botones */
+.btn {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para hover */
+}
+
+/* Botón de descarga */
+.btn-success {
+    background-color: #e91e63; /* Rosa para el botón de descarga */
+    border-color: #e91e63;
+}
+
+.btn-success:hover {
+    background-color: #d81b60; /* Rosa más oscuro en hover */
+    transform: translateY(-2px); /* Efecto sutil de elevación */
+}
+
+/* Botón de descarga de capas */
+.btn-info {
+    background-color: #f48fb1; /* Rosa claro para el botón de descarga de capas */
+    border-color: #f48fb1;
+}
+
+.btn-info:hover {
+    background-color: #f06292; /* Rosa más oscuro en hover */
+    transform: translateY(-2px); /* Efecto sutil de elevación */
+}
+
+/* Botón de volver a opciones */
+.btn-primary {
+    background-color: #9c27b0; /* Rosa morado para el botón de volver */
+    border-color: #9c27b0;
+}
+
+.btn-primary:hover {
+    background-color: #7b1fa2; /* Rosa más oscuro en hover */
+    transform: translateY(-2px); /* Efecto sutil de elevación */
+}
+
+/* Espaciado entre los elementos */
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+/* Ajuste de la apariencia en dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Menos relleno en pantallas pequeñas */
+    }
+
+    h2.text-primary {
+        font-size: 2rem; /* Reducir tamaño del título en pantallas pequeñas */
+    }
+
+    .btn {
+        font-size: 1rem; /* Reducir tamaño de los botones en pantallas pequeñas */
+        padding: 10px 18px; /* Ajustar tamaño de los botones */
+    }
+
+    .card-body {
+        padding: 15px; /* Ajustar el padding en pantallas pequeñas */
+    }
+}

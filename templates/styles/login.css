@@ -1,0 +1,57 @@
+/* Estilos generales */
+body {
+    background-color: #f9f9f9; /* Color de fondo suave */
+}
+
+/* Colores personalizados */
+.text-pink {
+    color: #e91e63; /* Rosa oscuro para los títulos */
+}
+
+.btn-pink {
+    background-color: #e91e63; /* Rosa para el botón */
+    border: none;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: #d81b60; /* Rosa más oscuro en hover */
+}
+
+.card {
+    border-radius: 15px; /* Bordes redondeados para la tarjeta */
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #ddd; /* Borde suave alrededor de la tarjeta */
+}
+
+.card h2 {
+    color: #e91e63; /* Título en rosa oscuro */
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 10px; /* Bordes redondeados para los inputs */
+    border: 1px solid #ddd; /* Borde suave para los inputs */
+}
+
+.form-control:focus {
+    border-color: #e91e63; /* Resaltar el borde con rosa cuando está enfocado */
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.5); /* Sombra rosa suave */
+}
+
+/* Estilo de los mensajes de alerta */
+.alert-danger {
+    background-color: #f8d7da; /* Fondo suave para mensajes de error */
+    border-color: #f5c6cb; /* Borde suave */
+    color: #721c24; /* Texto rojo */
+}
+
+/* Ajustar el tamaño de los inputs y el botón */
+input, button {
+    font-size: 1rem; /* Aumentar el tamaño del texto en los inputs */
+}
+
+button {
+    font-weight: bold;
+    border-radius: 10px; /* Bordes redondeados para el botón */
+}

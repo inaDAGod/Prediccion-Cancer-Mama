@@ -1,0 +1,69 @@
+/* Estilos generales */
+body {
+    background-color: #f9f9f9; /* Fondo suave y claro */
+    font-family: 'Arial', sans-serif; /* Tipografía clara y legible */
+}
+
+/* Estilo para el título */
+h2.text-pink {
+    color: #e91e63; /* Rosa vibrante */
+    font-weight: bold;
+}
+
+/* Estilo para los botones */
+.btn-modelo {
+    background-color: #e91e63; /* Rosa para el botón J48 */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-modelo:hover {
+    background-color: #d81b60; /* Rosa más oscuro al hacer hover */
+}
+
+.btn-modelo-cluster {
+    background-color: #8e44ad; /* Color morado para Cluster */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-modelo-cluster:hover {
+    background-color: #732d91; /* Morado más oscuro al hacer hover */
+}
+
+.btn-modelo-red {
+    background-color: #2ecc71; /* Verde para Red Neuronal */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-modelo-red:hover {
+    background-color: #27ae60; /* Verde más oscuro al hacer hover */
+}
+
+/* Estilo de los textos */
+p.lead {
+    color: #666; /* Gris oscuro para el texto de descripción */
+    font-size: 1.1rem;
+}
+
+/* Espaciado entre los botones */
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* Estilo adicional para los botones */
+button {
+    padding: 10px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
