@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from model_j48 import train_and_predict  # Importar lógica del modelo J48
+from model_cluster import process_clusters  # Importar lógica del Clustering
 import os
 
 app = Flask(__name__)
@@ -74,6 +75,26 @@ def run_model_j48(file_path):
         )
     except Exception as e:
         flash(f"Error al procesar el modelo J48: {str(e)}", 'danger')
+        return redirect(url_for('index'))
+
+# Ruta para ejecutar Clustering
+@app.route('/run-model/cluster/<file_path>', methods=['GET'])
+def run_model_cluster(file_path):
+    try:
+        # Ruta del archivo subido
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file_path)
+
+        # Procesar el archivo con Clustering
+        result = process_clusters(file_path)
+
+        # Mostrar resultado y gráfico
+        return render_template(
+            'result_cluster.html',
+            result=result,
+            graph_path='uploads/clusters.png'
+        )
+    except Exception as e:
+        flash(f"Error al procesar el modelo de Clustering: {str(e)}", 'danger')
         return redirect(url_for('index'))
 
 if __name__ == "__main__":
