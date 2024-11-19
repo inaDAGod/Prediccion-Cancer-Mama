@@ -51,6 +51,17 @@ input[type="file"]:focus {
     width: 100%; /* El botón ocupará todo el ancho */
 }
 
+.navbar {
+    background-color: #FF66B2; /* Barra de navegación rosa */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* Texto blanco en la navbar */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF3385 !important; /* Hover color rosa más fuerte */
+}
 .buplo:hover {
     background-color: #f56b99; 
 }

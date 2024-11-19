@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='contactos.css') }}">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Cáncer de Mama</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ url_for('login') }}">Iniciar Sesion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="hero">
+        <div class="container">
+            <h2 class="text-center">Contacto</h2>
+            <p class="text-center">Aquí puedes encontrar los detalles de contacto de los estudiantes que desarrollaron este proyecto.</p>
+
+            <!-- Descripción del proyecto -->
+            <p class="text-center">
+                Estamos desarrollando un sistema de predicción de cáncer de mama como parte del curso de <strong>Sistemas de Información</strong>. Este proyecto tiene como objetivo utilizar técnicas de análisis de datos para ayudar en la detección temprana de cáncer de mama, lo que es de vital importancia para la prevención y tratamiento de esta enfermedad. 
+                Creemos que este tipo de sistemas puede hacer una diferencia significativa en la salud pública, al facilitar diagnósticos rápidos y precisos, apoyando a los profesionales de la salud en su toma de decisiones.
+            </p>
+
+            <div class="text-center mt-4">
+                <a class="btn btn-primary" href="{{ url_for('static', filename='documento.pdf') }}" target="_blank">
+                    Ver Documento del Proyecto
+                </a>
+            </div>
+            
+
+            <div class="row">
+                <!-- Estudiante 1 -->
+                <div class="col-md-3">
+                    <div class="contact-card">
+                        <img src="{{ url_for('static', filename='josue.jpg') }}" alt="Estudiante 1">
+                        <h3>Josue Nisthaus</h3>
+                        <p>josue.nisthaus@ucb.edu.bo</p>
+                    </div>
+                </div>
+
+                <!-- Estudiante 2 -->
+                <div class="col-md-3">
+                    <div class="contact-card">
+                        <img src="{{ url_for('static', filename='daniela.jpg') }}" alt="Estudiante 2">
+                        <h3>Daniela Guzman</h3>
+                        <p>daniela.guzman.b@ucb.edu.bo</p>
+                    </div>
+                </div>
+
+                <!-- Estudiante 3 -->
+                <div class="col-md-3">
+                    <div class="contact-card">
+                        <img src="{{ url_for('static', filename='jhulianna.jpg') }}" alt="Estudiante 3">
+                        <h3>Jhulianna Tarqui</h3>
+                        <p>jhulianna.tarqui@ucb.edu.bo</p>
+                    </div>
+                </div>
+
+                <!-- Estudiante 4 -->
+                <div class="col-md-3">
+                    <div class="contact-card">
+                        <img src="{{ url_for('static', filename='mauricio.jpg') }}" alt="Estudiante 4">
+                        <h3>Alan Fernzandez</h3>
+                        <p>alan.fernandez@ucb.edu.bo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Proyecto de Predicción de Cáncer de Mama. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

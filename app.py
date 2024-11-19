@@ -45,6 +45,11 @@ def upload():
             flash('Por favor, sube un archivo CSV válido.', 'danger')
     return render_template('upload.html')
 
+@app.route('/contactos')
+def contactos():
+    return render_template('contactos.html')
+
+
 # Ruta para mostrar opciones de modelo
 @app.route('/model-options/<file_path>')
 def model_options(file_path):

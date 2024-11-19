@@ -1,0 +1,63 @@
+body {
+    background-color: white; /* Fondo blanco */
+}
+
+.navbar {
+    background-color: #FF66B2; /* Barra de navegación rosa */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* Texto blanco en la navbar */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF3385 !important; /* Hover color rosa más fuerte */
+}
+
+.hero {
+    background-color: white; /* Fondo rosa para la sección de contacto */
+    color: black;
+    padding: 50px 0;
+}
+.contact-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.contact-card {
+    background-color: #f7afd3; /* Fondo rosa en los cards */
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #FF3385; /* Cambia a un verde */
+    border-color: #fcb9d4;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 2%;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #fcb9d4; /* Verde más oscuro al pasar el cursor */
+    border-color: #FF3385;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+}

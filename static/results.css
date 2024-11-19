@@ -5,14 +5,18 @@ body {
     color: #333; /* Color de texto general */
 }
 
-/* Estilo para el contenedor principal */
-.container {
-    background-color: #fff; /* Fondo blanco para el contenedor */
-    padding: 40px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+.navbar {
+    background-color: #FF66B2; /* Barra de navegación rosa */
 }
 
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* Texto blanco en la navbar */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF3385 !important; /* Hover color rosa más fuerte */
+}
 /* Título principal */
 h2.text-primary {
     color: #e91e63; /* Rosa vibrante para el título */
