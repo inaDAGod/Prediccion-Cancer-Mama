@@ -58,8 +58,20 @@ def run_model_j48(file_path):
         # Procesar el archivo con J48
         prediction = train_and_predict(file_path)
 
-        # Mostrar resultado y gráfico
-        return render_template('result.html', result=f"El modelo J48 procesó el archivo con éxito.", graph_path='uploads/tree.png')
+        # Definir la interpretación
+        if prediction == 2:
+            interpretation = "Benigno"
+        elif prediction == 4:
+            interpretation = "Maligno"
+        else:
+            interpretation = "Desconocido"
+
+        # Mostrar resultado, interpretación y gráfico
+        return render_template(
+            'result.html',
+            result=interpretation,
+            graph_path='uploads/tree.png'
+        )
     except Exception as e:
         flash(f"Error al procesar el modelo J48: {str(e)}", 'danger')
         return redirect(url_for('index'))
