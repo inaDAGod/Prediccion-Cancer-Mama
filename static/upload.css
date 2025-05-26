@@ -1,77 +1,86 @@
-/* Estilo general para el body */
+:root {
+  --pink: #FF66B2;
+  --pink-dark: #FF3385;
+}
+
 body {
-    background-color: #f9f9f9; /* Fondo claro para un aspecto limpio */
-    font-family: 'Arial', sans-serif; /* Fuente clara y moderna */
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Estilo para el título principal */
 h2.text-pink {
-    color: #e91e63; /* Rosa vibrante para el título */
-    font-weight: bold;
-    font-size: 2rem;
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-/* Estilo para el texto de descripción */
 p.lead {
-    color: #666; /* Gris suave para el texto */
-    font-size: 1.1rem;
+  color: #666;
+  font-size: 1.1rem;
 }
 
-/* Estilo del formulario */
+/* Form container */
 form {
-    background-color: #ffffff; /* Fondo blanco para el formulario */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Estilo para el campo de input del archivo */
 input[type="file"] {
-    background-color: #f8f9fa; /* Fondo ligeramente gris para el campo de archivo */
-    border: 2px solid #e91e63; /* Bordes rosa para hacer contraste */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 10px;
-    width: 100%; /* Hacer que ocupe el 100% del contenedor */
-    transition: border-color 0.3s ease; /* Transición suave cuando el campo de archivo es enfocado */
+  background-color: #f8f9fa;
+  border: 2px solid #e91e63;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  transition: border-color 0.3s ease;
 }
 
 input[type="file"]:focus {
-    border-color: #d81b60; /* Cambio de color en el borde cuando el input está enfocado */
+  border-color: #d81b60;
 }
 
-/* Estilo del botón */
 .buplo {
-    background-color: #e91e63; /* Verde para el botón de subir */
-    color: white;
-    border: none;
-    border-radius: 10px; /* Bordes redondeados para el botón */
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-    width: 100%; /* El botón ocupará todo el ancho */
+  background-color: #e91e63; /* Rosa para el botón de subir */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.buplo:hover {
+  background-color: #f56b99;
 }
 
 .navbar {
-    background-color: #FF66B2; /* Barra de navegación rosa */
+  background-color: var(--pink);
+  z-index: 2;
 }
 
-.navbar-brand, .navbar-nav .nav-link {
-    color: white !important; /* Texto blanco en la navbar */
+header{
+  background-color: var(--pink);
 }
-
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-link {
+  font-weight: 500;
+  color: white !important;
+}
 .navbar-nav .nav-link:hover {
-    color: #FF3385 !important; /* Hover color rosa más fuerte */
-}
-.buplo:hover {
-    background-color: #f56b99; 
+  color: var(--pink-dark) !important;
 }
 
-/* Estilo adicional para los márgenes */
 .mb-4 {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Espaciado del formulario */
 form {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }

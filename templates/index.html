@@ -1,144 +1,175 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predicción de Cáncer de Mama</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Predicción de Cáncer de Mama</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
-<body class="bg-light">
-
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-pink">
-        <div class="container">
-            <a class="navbar-brand text-white" href="{{ url_for('index') }}">Cáncer de Mama</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ url_for('contactos') }}">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sección Hero con título principal y llamada a acción -->
-    <section class="hero bg-pink text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Bienvenido a la Plataforma de Predicción de Cáncer de Mama</h1>
-            <p class="lead">Usa nuestra herramienta avanzada para ayudar a detectar posibles riesgos de cáncer de mama.</p>
-            <a href="{{ url_for('login') }}" class="btn btn-light btn-lg">Iniciar Sesión</a>
-        </div>
-    </section>
-
-    <!-- Sección sobre el cáncer de mama -->
-    <section class="container py-5">
-        <h2 class="text-center mb-4">¿Qué es el Cáncer de Mama?</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <p>El cáncer de mama es el tipo de cáncer más común en mujeres, aunque también puede afectar a hombres. Se origina en las células de la mama y puede diseminarse a otras partes del cuerpo si no se detecta a tiempo.</p>
-                <p>Es fundamental realizarse chequeos regulares y estar al tanto de los síntomas para una detección temprana.</p>
-                <p>Entre los síntomas más comunes se encuentran cambios en la piel de la mama, bultos o cambios en la forma del seno, y secreción anormal del pezón.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="https://media.ambito.com/p/9569d97c363f9a6ad6782f2150932872/adjuntos/239/imagenes/041/896/0041896004/1200x675/smart/cancer-mama.png" alt="Cáncer de mama" class="img-fluid rounded">
-            </div>
-        </div>
-    </section>
-
-    <!-- Estadísticas sobre el cáncer de mama -->
-    <section class="container py-5">
-        <h2 class="text-center mb-4">Estadísticas sobre el Cáncer de Mama</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4 class="text-center">En Bolivia</h4>
-                <p>En Bolivia, el cáncer de mama representa una de las principales causas de muerte entre las mujeres. Según el Ministerio de Salud de Bolivia, aproximadamente 5,000 mujeres son diagnosticadas con cáncer de mama cada año, y más del 60% de ellas lo hacen en etapas avanzadas. Esto resalta la importancia de la detección temprana.</p>
-                <ul>
-                    <li>Incidencia en mujeres adultas: 25 por cada 100,000 mujeres.</li>
-                    <li>Tasa de mortalidad: 10 muertes por cada 100,000 mujeres.</li>
-                    <li>50% de los casos se diagnostican a partir de los 50 años.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h4 class="text-center">A Nivel Mundial</h4>
-                <p>A nivel mundial, el cáncer de mama es la forma de cáncer más frecuente entre mujeres. Según la Organización Mundial de la Salud (OMS), cada año se registran más de 2 millones de nuevos casos de cáncer de mama, y más de 600,000 muertes anuales debido a este cáncer.</p>
-                <ul>
-                    <li>1 de cada 8 mujeres en el mundo desarrollará cáncer de mama a lo largo de su vida.</li>
-                    <li>La tasa de supervivencia global a 5 años es del 80%, dependiendo de la etapa del diagnóstico.</li>
-                    <li>Se estima que el cáncer de mama representa el 25% de todos los cánceres diagnosticados en mujeres.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cáncer de Mama en Hombres -->
-    <section class="container py-5">
-        <h2 class="text-center mb-4">El Cáncer de Mama también afecta a los hombres</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <p>El cáncer de mama no es exclusivo de las mujeres. Aunque es mucho menos común, los hombres también pueden desarrollar cáncer de mama. Se estima que aproximadamente el 1% de todos los casos de cáncer de mama ocurren en hombres.</p>
-                <p>Los síntomas en los hombres son similares a los de las mujeres, e incluyen bultos en el pecho, cambios en la piel del área mamaria, o secreción del pezón. El diagnóstico temprano es fundamental para un tratamiento exitoso.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="https://img.freepik.com/vector-premium/cartel-concientizacion-sobre-cancer-mama-cuerpo-hombre-que-cubre-pecho-vector_112018-979.jpg" alt="Cáncer de mama en hombres" class="img-fluid rounded">
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Sección sobre los Síntomas del Cáncer de Mama -->
-<section class="container py-5" id="sintomas">
-    <h2 class="text-center mb-4">Síntomas Comunes del Cáncer de Mama</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <p>El cáncer de mama en sus etapas iniciales puede no presentar síntomas evidentes, pero con el tiempo, los siguientes síntomas pueden aparecer:</p>
-            <ul>
-                <li><strong>Bultos en el seno</strong>: El síntoma más común. Los bultos pueden sentirse como una masa dura, aunque no todos los bultos son cancerosos.</li>
-                <li><strong>Cambios en la piel del seno</strong>: Pueden aparecer hoyuelos, arrugas o la piel del seno puede tomar un aspecto de "piel de naranja".</li>
-                <li><strong>Cambios en el pezón</strong>: Si el pezón se retrae (se hunde hacia adentro), se enrojese o presenta secreción anormal, puede ser una señal de alerta.</li>
-                <li><strong>Dolor en el seno o el pezón</strong>: Aunque el dolor no es común en las etapas tempranas, algunos casos pueden presentar molestias o dolor localizado.</li>
-                <li><strong>Secreción del pezón</strong>: Cualquier tipo de secreción anormal, especialmente si es sanguinolenta o transparente, debe ser evaluada por un médico.</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <img src="https://www.clinicalourdesmartin.com/images/easyblog_articles/131/b2ap3_large_sintomas-cancer-mama-micropigmentacion-areola-sevilla.png" alt="Síntomas del Cáncer de Mama" class="img-fluid rounded">
-        </div>
+<body>
+  <header class="navbar navbar-expand-lg bg-pink navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">Cáncer de Mama</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contactos') }}">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light ms-3" href="{{ url_for('login') }}">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-12">
-            <p><strong>Importante:</strong> No todos los bultos o cambios en el seno son cáncer. Sin embargo, si experimentas alguno de estos síntomas, es fundamental consultar a un médico para un diagnóstico adecuado. La detección temprana puede mejorar significativamente las posibilidades de un tratamiento exitoso.</p>
-        </div>
+  </header>
+
+  <section class="hero hero-with-particles text-center text-white d-flex align-items-center">
+    <div id="particles-js"></div>
+    <div class="container position-relative">
+      <h1 class="hero-title mb-3">Bienvenido a la Plataforma de Predicción de Cáncer de Mama</h1>
+      <p class="hero-subtitle mb-4">Nuestra herramienta avanzada te ayuda a detectar riesgos temprano.</p>
+      <a href="{{ url_for('login') }}" class="btn btn-light btn-lg hero-btn" role="button">Comenzar Ahora</a>
     </div>
-</section>
+  </section>
 
-
-    <!-- Video informativo -->
-    <section class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Conoce más sobre el Cáncer de Mama</h2>
-            <iframe width="80%" height="400" src="https://www.youtube.com/embed/iupY8RKSqLQ?si=HVSE8chB-63wURp6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- Llamada a la acción para la predicción -->
-    <section class="bg-pink text-white text-center py-5">
+  <main>
+        <section class="info-section py-5">
         <div class="container">
-            <h2 class="display-4">¿Te gustaría predecir tu riesgo de cáncer de mama?</h2>
-            <p>Usa nuestra herramienta para analizar tu información y obtener una predicción basada en inteligencia artificial.</p>
-            <a href="{{ url_for('login') }}" class="btn btn-light btn-lg">Iniciar Sesión</a>
+            <h2 class="section-title text-center mb-5">¿Qué es el Cáncer de Mama?</h2>
+            <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <p>El cáncer de mama es el tipo de cáncer más común en mujeres, aunque también puede afectar a hombres. Se origina en las células de la mama y puede diseminarse si no se detecta a tiempo.</p>
+                <p>Realizar chequeos regulares y conocer los síntomas es fundamental para una detección temprana y un tratamiento efectivo.</p>
+                <ul class="list-unstyled mt-3">
+                <li>• Cambios en la piel de la mama</li>
+                <li>• Bultos o cambios en la forma del seno</li>
+                <li>• Secreción anormal del pezón</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://media.ambito.com/p/9569d97c363f9a6ad6782f2150932872/adjuntos/239/imagenes/041/896/0041896004/1200x675/smart/cancer-mama.png" alt="Cáncer de mama" class="img-fluid rounded shadow-sm info-img">
+            </div>
+            </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Predicción de Cáncer de Mama. Todos los derechos reservados.</p>
-    </footer>
+        <section class="stats-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Estadísticas</h2>
+            <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 px-4 py-5 shadow-sm">
+                <h3 class="h5 text-pink mb-3">En Bolivia</h3>
+                <p>Aproximadamente 5,000 mujeres son diagnosticadas cada año; más del 60% en etapas avanzadas.</p>
+                <ul class="stats-list">
+                    <li>Incidencia: 25/100,000 mujeres</li>
+                    <li>Mortalidad: 10/100,000 mujeres</li>
+                    <li>50% de casos mayores de 50 años</li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 px-4 py-5 shadow-sm">
+                <h3 class="h5 text-pink mb-3">A Nivel Mundial</h3>
+                <p>Más de 2 millones de casos nuevos y 600,000 muertes anuales.</p>
+                <ul class="stats-list">
+                    <li>1 de cada 8 mujeres desarrollará cáncer de mama</li>
+                    <li>Supervivencia global a 5 años: 80%</li>
+                    <li>25% de todos los cánceres en mujeres</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <section class="info-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Cáncer de Mama en Hombres</h2>
+            <div class="row align-items-center">
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <img src="https://img.freepik.com/vector-premium/cartel-concientizacion-sobre-cancer-mama-cuerpo-hombre-que-cubre-pecho-vector_112018-979.jpg" alt="Cáncer de mama en hombres" class="img-fluid rounded shadow-sm info-img">
+            </div>
+            <div class="col-lg-6">
+                <p>Aunque es menos común, alrededor del 1% de los casos ocurren en hombres. Los síntomas incluyen bultos, cambios en la piel y secreciones.</p>
+                <p>La detección temprana es igual de importante para un tratamiento exitoso.</p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="symptoms-section py-5 bg-light">
+        <div class="container" id="sintomas">
+            <h2 class="section-title text-center mb-4">Síntomas Comunes</h2>
+            <div class="row align-items-center">
+            <div class="col-lg-6">
+                <ul class="list-check">
+                <li><strong>Bultos en el seno:</strong> masas duras aunque no todos son cancerosos</li>
+                <li><strong>Cambios en la piel:</strong> hoyuelos o aspecto de "piel de naranja"</li>
+                <li><strong>Cambios en el pezón:</strong> retracción, enrojecimiento o secreción anormal</li>
+                <li><strong>Dolor localizado:</strong> menos común pero posible en etapas avanzadas</li>
+                <li><strong>Secreción del pezón:</strong> cualquier fluido anormal debe ser evaluado</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://www.clinicalourdesmartin.com/images/easyblog_articles/131/b2ap3_large_sintomas-cancer-mama-micropigmentacion-areola-sevilla.png" alt="Síntomas del Cáncer de Mama" class="img-fluid rounded shadow-sm info-img">
+            </div>
+            </div>
+            <p class="mt-4 text-center text-muted"><strong>Importante:</strong> Consulta a un médico ante cualquier síntoma. La detección temprana salva vidas.</p>
+        </div>
+        </section>
+
+        <section class="video-section py-5 text-center">
+        <div class="container">
+            <h2 class="section-title mb-4">Conoce más</h2>
+            <div class="ratio ratio-16x9 shadow-sm rounded">
+            <iframe src="https://www.youtube.com/embed/iupY8RKSqLQ?si=HVSE8chB-63wURp6" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+        </div>
+        </section>
+
+        <section class="cta-section text-center text-white py-5">
+        <div class="container">
+            <h2 class="display-5 mb-3">¿Listo para predecir tu riesgo?</h2>
+            <p class="mb-4">Analiza tu información con nuestra IA y obtén resultados precisos.</p>
+            <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg">Iniciar Sesión</a>
+        </div>
+        </section>
+  </main>
+
+  <footer class="footer text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Predicción de Cáncer de Mama. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* Inicialización de partículas */
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 800 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+        modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>

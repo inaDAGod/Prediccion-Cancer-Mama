@@ -1,98 +1,166 @@
-/* Estilos personalizados */
-body {
-    font-family: Arial, sans-serif;
+:root {
+  --pink: #FF66B2;
+  --pink-dark: #FF3385;
+  --light-pink: #FFB2D9;
+  --gray-light: #F8F9FA;
+  --text-dark: #333;
 }
 
-.bg-pink {
-    background-color: #FF66B2; /* Color rosa para todo lo relacionado al cáncer de mama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--gray-light);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: var(--pink);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--pink-dark) !important;
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: var(--pink);
 }
 
 .hero {
-    background-color: #ffb2d9;
-    color: white;
-    padding: 80px 0;
+  background: linear-gradient(135deg, var(--pink), var(--light-pink));
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-with-particles #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-with-particles .container {
+  position: relative;
+  z-index: 2;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
 }
 
-
-.navbar {
-    background-color: #FF66B2; /* Barra de navegación rosa */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-.navbar-brand, .navbar-nav .nav-link {
-    color: white !important; /* Texto blanco en la navbar */
+.hero-subtitle {
+  font-size: 1.2rem;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #FF3385 !important; /* Hover color rosa más fuerte */
-}
-/* Estilo para los textos de la sección principal */
-h1, h2 {
-    font-weight: bold;
+.hero-btn {
+  transition: transform 0.3s;
 }
 
-h1 {
-    font-size: 3.5rem;
+.hero-btn:hover {
+  transform: translateY(-3px);
 }
 
-h2 {
-    font-size: 2.5rem;
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--pink);
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.info-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.carousel-inner img {
-    height: 400px;
-    object-fit: cover;
+.stats-section .card {
+  border: none;
+  border-radius: 1rem;
 }
 
-/* Botones personalizados */
-.btn-light {
-    background-color: white;
-    color: #FF66B2;
-    border: none;
+.stats-list {
+  list-style: none;
 }
 
-.btn-light:hover {
-    background-color: #FF3385;
-    color: white;
+.stats-list li {
+  margin-bottom: 0.5rem;
 }
 
-.navbar-nav .nav-link {
-    font-size: 1.1rem;
-    margin-left: 20px;
+.list-check {
+  list-style: none;
+  padding-left: 1rem;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #FF66B2;
+.list-check li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Estilo de los márgenes de las secciones */
-section {
-    margin-bottom: 40px;
-}
-/* Asegura que las imágenes del carrusel se ajusten sin deformarse */
-.carousel-image {
-    object-fit: cover; /* Asegura que la imagen cubra el espacio disponible sin cortarse */
-    height: 500px; /* Define una altura fija para las imágenes, ajustable según tu diseño */
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+.list-check li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--pink);
 }
 
-/* Opcional: Establece un borde redondeado a las imágenes del carrusel para un diseño más suave */
-.carousel-inner .carousel-item img {
-    border-radius: 10px;
+.symptoms-section {
+  background-color: #fff;
 }
 
-/* Asegura que el carrusel se vea centrado */
-#carouselExampleControls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.video-section .ratio {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section {
+  background-color: var(--pink-dark);
+}
+
+.cta-section .btn-outline-light {
+  border-width: 2px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
 }
