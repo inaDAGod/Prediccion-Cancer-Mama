@@ -137,6 +137,37 @@ ul.text-start li {
     margin-top: 1.5rem;
 }
 
+:root {
+  --pink: #FF66B2;
+  --pink-dark: #FF3385;
+  --light-bg: #F8F9FA;
+}
+
+/* Bloque de precisión */
+.precision-highlight {
+  background-color: var(--light-bg);
+  border: 2px solid var(--pink);
+  border-radius: 8px;
+}
+
+.precision-highlight h3 {
+  color: var(--pink-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge grande para el porcentaje */
+.precision-badge {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--pink);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+
 /* Ajuste de la apariencia en dispositivos móviles */
 @media (max-width: 768px) {
     .container {

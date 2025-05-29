@@ -55,17 +55,12 @@ def contactos():
 def model_options(file_path):
     return render_template('model_options.html', file_path=file_path)
 
-# Ruta para ejecutar J48
 @app.route('/run-model/J48/<file_path>', methods=['GET'])
 def run_model_j48(file_path):
     try:
-        # Ruta del archivo subido
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], file_path)
+        full_path = os.path.join(app.config['UPLOAD_FOLDER'], file_path)
+        prediction = train_and_predict(full_path)
 
-        # Procesar el archivo con J48
-        prediction = train_and_predict(file_path)
-
-        # Definir la interpretación
         if prediction == 2:
             interpretation = "Benigno"
         elif prediction == 4:
@@ -73,16 +68,16 @@ def run_model_j48(file_path):
         else:
             interpretation = "Desconocido"
 
-        # Mostrar resultado, interpretación y gráfico
         return render_template(
             'result.html',
             result=interpretation,
             graph_path='uploads/tree.png',
-            file_path=os.path.basename(file_path)
+            file_path=os.path.basename(full_path)
         )
     except Exception as e:
-        flash(f"Error al procesar el modelo J48: {str(e)}", 'danger')
+        flash(f"Error al procesar el modelo J48: {e}", 'danger')
         return redirect(url_for('index'))
+
 
 # Ruta para ejecutar Clustering
 @app.route('/run-model/cluster/<file_path>', methods=['GET'])
@@ -128,6 +123,8 @@ def run_model_neural(file_path):
         file_name = os.path.basename(file_path)
         flash(f"Error al procesar el modelo de Red Neuronal: {str(e)}", 'danger')
         return redirect(url_for('model_options', file_path=file_name))
+    
+
 
 if __name__ == "__main__":
     app.run(debug=True)

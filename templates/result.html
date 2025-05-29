@@ -30,16 +30,14 @@
     <div class="container py-5">
         <h2 class="titulo">Resultado del Modelo J48</h2>
         
-        <!-- Mostrar el resultado -->
         <p class="lead">Predicción: <strong>{{ result }}</strong></p>
-        
-        <!-- Interpretación -->
+
         <div class="alert alert-info mt-3">
-            {% if result == "Benigno" %}
-                El modelo indica que el caso es <strong>benigno</strong>. No hay signos de malignidad en los datos proporcionados.
-            {% elif result == "Maligno" %}
-                El modelo indica que el caso es <strong>maligno</strong>. Se recomienda realizar más estudios médicos.
-            {% endif %}
+        {% if result == "Benigno" %}
+            El modelo indica que el caso es <strong>benigno</strong>. No hay signos de malignidad.
+        {% elif result == "Maligno" %}
+            El modelo indica que el caso es <strong>maligno</strong>. Se recomienda realizar más estudios médicos.
+        {% endif %}
         </div>
 
         <!-- Explicación del modelo -->
@@ -70,9 +68,10 @@
             </a>
         </div>
 
-        <a href="{{ url_for('model_options', file_path=file_path) }}" class="btn btn-primary mt-3">
-          Volver a Opciones del Modelo
-      </a>>
+        <a href="{{ url_for('model_options', file_path=file_path) }}"
+        class="btn btn-primary mt-3">
+        Volver a Opciones del Modelo
+        </a>
     </div>
 </body>
 </html>
